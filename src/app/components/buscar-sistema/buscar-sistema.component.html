@@ -1,0 +1,58 @@
+<div class="container">
+  <div class=" text-center mt-5 ">
+      <h1 >Consultar Sistema</h1>
+  </div>
+  <div class="row ">
+  <div class="col-lg-13 mx-auto">
+  <div class="card mt-2 mx-auto p-4 bg-light">
+      <div class="card-body bg-light">
+ 
+          <div class = "container">
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+          <div class="controls">
+          <div class="row">
+            <div class="col-md-5"></div>
+              <div class="col-md-3">
+                  <div class="form-group">
+                      <label for="form_name">Nombre de Sistema</label>
+                      <input id="" type="text" name="nombreSistema" class="form-control" [(ngModel)]="sistema.nombreSistema" data-error="Valid email is required." >
+
+                  </div>
+              <br>  
+              <div class="col-md-5">
+                  <button class="btn" style="background-color: #3164F4; color: #FFFFFF;">Buscar <i class="fa fa-search" ></i></button>
+
+              </div>
+      </div>
+  </div>
+
+  </div>
+   </form>
+  </div>
+      </div>
+</div>
+<div class="container">
+  <div class=" text-center mt-5 ">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Sistema </th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let sistemas of sistemas">
+          <td>{{sistemas.nombreSistema}}</td>
+          <td><button class="btn" style="background-color: #3164F4;" [routerLink]="['/editar-sistema',sistemas.id]" routerLinkActive="active-link"><i class="fa fa-pencil-square"></i></button></td>
+          <td><button class="btn2" (click)="eliminar(sistemas.id)" routerLinkActive="active-link"><i class="fa fa-pencil-square"></i></button></td>
+
+          <!--<td><button class="btn2" (click)="eliminar(avisos.id)"><i class="fa fa-trash"></i></button></td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

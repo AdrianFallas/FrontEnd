@@ -1,0 +1,52 @@
+
+<div role="navigation" *ngIf="!this.hideMenu()" >
+  <div class="">
+    <div class="brand-logo">
+      <img class="derecha" src="https://sitiooij.poder-judicial.go.cr/images/placa-lg.png" width="200" height="200" />
+    </div>
+    <div class="text-center">
+      <nav class="top-bar-wrap">
+        <ul class="top-bar">
+          <li *ngIf="!isLogged && role=='Administrador'" class="nav-item">
+            <a class="nav-link"><span class="inner-link">Plataforma de Información Policial - Consulta de
+                Bitácora</span></a>
+          </li>
+          <li *ngIf="isLogged" class="nav-item">
+            <a class="nav-link"><span class="inner-link">usuario: {{usuario}}</span></a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="main-nav-wrap">
+        <ul class="top-bar">
+          <li class="nav-item">
+            <a *ngIf="isLogged" routerLink="/inicio" routerLinkActive="active-link" class="nav-link"><span
+                class="inner-link">Inicio</span></a>
+          </li>
+          <li *ngIf="isLogged && (role=='Administrador' || role=='Consultas' )" class="nav-item">
+            <a routerLink="/consultar-bitacora" routerLinkActive="active-link" class="nav-link"><span class="inner-link">Consultar Bitácora</span></a>
+          </li>
+          <li *ngIf="isLogged && (role=='Administrador' || role=='Reportes')"  class="nav-item">
+            <a  routerLink="/reportes"  routerLinkActive="active-link" class="nav-link"><span class="inner-link">Reportes</span></a>
+          </li>
+          
+            <li *ngIf="isLogged && role=='Administrador'" class="nav-item">
+            <a routerLink="/avisos" routerLinkActive="active-link" class="nav-link"><span
+                class="inner-link">Avisos</span></a>
+          </li> 
+
+
+          <li *ngIf="isLogged && role=='Administrador'" class="nav-item">
+            <a routerLink="/usuarios" routerLinkActive="active-link" class="nav-link"><span class="inner-link">Catalogos</span></a>
+          </li>
+          <li *ngIf="isLogged"class="nav-item">
+            <a routerLink="/ayuda" routerLinkActive="active-link" class="nav-link"><span class="inner-link">Ayuda</span></a>
+            
+          </li>
+          <li *ngIf="isLogged" class="nav-item">
+            <a (click)="logout()" class="nav-link"><span class="inner-link">Salir</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

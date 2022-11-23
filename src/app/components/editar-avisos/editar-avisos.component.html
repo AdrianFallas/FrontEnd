@@ -1,0 +1,81 @@
+<div class="container">
+    <div class=" text-center mt-5 ">
+        <h1 >Editar Avisos</h1>   
+    </div>
+  <div class="row ">
+  <div class="col-lg-11 mx-auto">
+    <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+   
+        <div class = "container">
+        <form id="contact-form" role="form" #form="ngForm" *ngFor= "let avisos of avisos" (ngSubmit)="actualizar()">
+        <div class="controls">
+
+            <div class="form-group">
+                <label for="id"  id="id">id</label>
+                <input type="text" id="start" name="trip-start"
+                  class="form-control" [(ngModel)]="avisos.id" >
+                
+            </div>
+  
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="fecha" id="fecha">(*)Fecha</label>
+                        <input  type="text" id="fecha" name="fecha"
+                          class="form-control" [(ngModel)]="avisos.fecha" >
+                        
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="horaI" id="horaI">Hora inicio</label>
+                        <input  id="horaI" type="time" name="horaI" class="form-control" required="required" data-error="Lastname is required."
+                         [(ngModel)]="avisos.horaI" > 
+                    </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                      <label for="horaF" id="horaF" >Hora final</label>
+                      <input id="horaF" type="time" name="horaF" class="form-control" placeholder="Please enter your lastname *" required="required" 
+                      data-error="Lastname is required."  [(ngModel)]="avisos.horaF" >
+                     </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label for="descripcion" id="descripcion">Descripcion</label>
+                    <textarea id="descripcion" name="descripcion" class="form-control" rows="4" required="required" data-error="Please, leave us a message." 
+                     [(ngModel)]="avisos.descripcion" >Insertar Usuario en tabla de usuarios</textarea
+                        >
+                    </div>
+  
+                </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="encargado" id="encargado">Encargado</label>
+                              <input id="encargado" type="text" name="encargado" class="form-control" required="required" data-error="Valid email is required." 
+                               [(ngModel)]="avisos.encargado" >
+                              
+                          </div>
+                          <br>  
+                          <div class="col-md-8">
+                          <button class="btn">Guardar <i class="fa fa-save"></i></button>
+                          
+                        
+                    </div>
+                          
+                  </div>
+                  
+                 
+              
+      
+            </div>
+  
+  
+    </div>
+     </form>
+    </div>
+        </div>

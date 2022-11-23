@@ -1,0 +1,33 @@
+<div class="container">
+    <div class=" text-center mt-5 ">
+        <h1 >Editar Sistema</h1>
+    </div>
+    <div class="row ">
+    <div class="col-lg-13 mx-auto">
+    <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+
+            <div class = "container">
+                <form id="contact-form" role="form" #form="ngForm" *ngFor= "let sistemas of sistemas" (ngSubmit)="actualizar()">
+            <div class="controls">
+
+            <div class="row">
+              <div class="col-md-5"></div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="form_name">Nombre de Sistema</label>
+                        <input  id="form_encargado" type="text" name="encargado" class="form-control"[(ngModel)]="sistemas.nombreSistema" data-error="Valid email is required.">
+
+                    </div>
+                <br>
+                <div class="col-md-5">
+                    <button class="btn" style="background-color: #3164F4; color: #FFFFFF;">Guradar <i class="fa fa-save" ></i></button>
+
+                </div>
+        </div>
+    </div>
+    </div>
+     </form>
+    </div>
+        </div>
+  </div>

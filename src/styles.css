@@ -1,0 +1,219 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titulo{
+    font-family: 'Abyssinica SIL', serif;
+    text-align: center;
+}
+
+.top-bar .nav-item {
+    display: inline-block;
+  }
+   
+  nav {
+    padding: 0px;
+  }
+   
+  nav.top-bar-wrap {
+    background: #1976D2;
+  }
+   
+  .top-bar-wrap {
+    height: 40px;
+    line-height: 40px;
+  }
+   
+  .main-nav-wrap {
+    height: 80px;
+    line-height: 80px;
+  }
+   
+  nav.main-nav-wrap {
+    background: #1976D2;
+    font-size: 1.25rem
+  }
+   
+  nav.top-bar-wrap ul,
+  nav.main-nav-wrap ul {
+    margin-bottom: 0px;
+    margin-top: 0px
+  }
+   
+  a.nav-link:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-left: 12px solid rgba(0, 0, 0, 0.3);
+  }
+   
+  a.nav-link {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    font-family: '
+    Rubik'
+    ,
+    sans-serif;
+    transform: skew(-25deg);
+    transition: all 400ms ease-out
+  }
+   
+  a .inner-link {
+    display: inline-block;
+    transform: skew(25deg)
+  }
+   
+  .nav-link {
+    padding: 0px;
+  }
+   
+  .top-bar-wrap a {
+    padding-left: 12px;
+  }
+   
+  .main-nav-wrap a {
+    padding-left: 18px;
+  }
+   
+  .brand-logo img {
+    height: 40px;
+    transform: skew(25deg)
+  }
+   
+  .brand-phone a {
+    display: block;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 2px;
+    height: 40px;
+    line-height: 1.5em;
+    transform: skew(25deg)
+  }
+   
+  .brand-phone,
+  .brand-logo {
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    height: 120px;
+   
+    transform: skewX(-25deg);
+  }
+   
+  .brand-logo {
+    left: -30px;
+    padding-left: 70px;
+    background: #1976D2;
+    border-right: 2px solid #1976D2;
+   
+  }
+   
+  .brand-phone {
+    right: 0;
+    right: -30px;
+    padding-right: 70px;
+    background: #1976D2;
+    border-left: 3px solid #1976D2;
+  }
+
+  div.noticia {
+    width: 50%;
+    margin: 20px auto;
+    background-color: #1976D2;
+    color: #000000;
+    padding: 15px;
+  }
+  
+  div.noticia img.izquierda {
+    float: left;
+    margin-right: 5px;
+  }
+  
+  div.noticia img.derecha {
+    float: right;
+    margin-left: 20px;
+  }
+  
+  div.reset {
+    clear: both;
+  }
+
+  
+  #header {
+    margin:auto;
+    width:500px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  ul, ol {
+    list-style:none;
+  }
+  
+  .nav > li {
+    float:left;
+  }
+  
+  .nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+  }
+  
+  .nav li a:hover {
+    background-color:#434343;
+  }
+  
+  .nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+  }
+  
+  .nav li:hover > ul {
+    display:block;
+  }
+  
+  .nav li ul li {
+    position:relative;
+  }
+  
+  .nav li ul li ul {
+    right:-140px;
+    top:0px;
+  }
+
+  .btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 19px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  .btn2 {
+    background-color: red; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 19px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+  .btn2:hover:hover {
+    background-color: red;
+  }
+
+  .wrapper {
+    text-align: center;
+}
